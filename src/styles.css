@@ -1,0 +1,72 @@
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100%;
+  height: 100%;
+}
+.App {
+  font-family: sans-serif;
+  background: #111;
+  height: 100%;
+}
+.container {
+  text-align: center;
+  padding: 50px 20px;
+}
+.dice-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+.dice {
+  font-size: 250px;
+  color: red;
+}
+.animate i {
+  animation: horizontal-shaking 1s;
+}
+
+button {
+  background: red;
+  color: #fff;
+  width: 250px;
+  height: 50px;
+  border-radius: 100px;
+  border: 0;
+  margin: 50px 0;
+  font-size: 20px;
+}
+@keyframes horizontal-shaking {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  15% {
+    transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+  }
+
+  30% {
+    transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+  }
+
+  45% {
+    transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+  }
+
+  60% {
+    transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+  }
+
+  75% {
+    transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
